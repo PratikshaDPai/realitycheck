@@ -247,12 +247,12 @@ jobs:
     <<: *contexts_defaults
     steps:
       - run: 
-        name: Debug env injection
-        command: |
-          echo "Dumping all env vars for troubleshooting:"
-          env | sort
-          echo "Now grepping for the test var:"
-          env | grep CONTEXT_END_TO_END_TEST_VAR
+          name: Debug env injection
+          command: |
+            echo "Dumping all env vars for troubleshooting:"
+            env | sort
+            echo "Now grepping for the test var:"
+            env | grep CONTEXT_END_TO_END_TEST_VAR
 
   multi-contexts:
     <<: *contexts_defaults
